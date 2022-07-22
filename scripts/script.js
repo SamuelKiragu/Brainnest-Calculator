@@ -20,9 +20,9 @@ function divide(a,b){
 
 //takes operator and two integers and calls any of the functions above
 function operate(op,a,b){
-    const OPERATORS = ["+", "-", "*", "/"];
-    const OPERATIONS = [add,subtract,multiply,divide];
-    return OPERATIONS[OPERATORS.indexOf(op)](a,b);
+    const OP = ["+", "-", "*", "/"];
+    const F = [add,subtract,multiply,divide];
+    return F[OP.indexOf(op)](a,b);
 }
 
 //interprate which button has been clicked
