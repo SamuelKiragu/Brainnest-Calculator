@@ -25,3 +25,12 @@ function operate(op,a,b){
     return OPERATIONS[OPERATORS.indexOf(op)](a,b);
 }
 
+//interprate which button has been clicked
+function handler(btn){
+    //TODO: ADD LOGIC HERE
+}
+
+const BUTTONS = document.querySelectorAll('button');
+BUTTONS.forEach((btn, key) => {
+    btn.addEventListener('click', ()=>handler(btn));
+});
