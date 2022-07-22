@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#DisplaySect{
+    background: #262626;
+    color: #f6f6f6;
+    height: 100px;
+    padding: 20px;
+}
+
+.RowContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.CalcItem{
+    padding: 10px 20px;
+    width: 100px;
+}
+
+body{
+    background: #b5adad;
+    margin: 100px 200px 0;
+}
