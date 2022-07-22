@@ -1,7 +1,11 @@
 //Global Values for Calculator
 var val1 = 0;
 var val2 = 0;
+var operator = null;
 const OP = ["+", "-", "*", "/"]; //possible operations
+
+//displayScreen
+const DISPLAY = document.querySelector("#DisplayItem");
 
 //adds two integers
 function add(a,b){
@@ -32,14 +36,28 @@ function operate(op,a,b){
 //interprate which button has been clicked
 function handler(btn){
     //TODO: ADD LOGIC HERE
-    const V = btn.textContent; //button value
+    const V = btn.value; //button value
 
     if(OP.includes(V)){
         //TODO: +,-,*,/ operations
+        val1 = parseInt(DISPLAY.textContent);
+        operator = V;
     }else if(V == "CLEAR"){
         //TODO: CLEAR operation
+        DISPLAY.textContent = 0;
     }else if(V == "="){
         //TODO: = operation
+        val2 = parseInt(DISPLAY.textContent);
+        DISPLAY.textContent = operate(operator,val1,val2);
+    }else{
+        if(operator != null) DISPLAY.textContent = 0;
+        //TODO: numberical operations
+        dText = DISPLAY.textContent.toString(); //text in Display
+        bText = V.toString();
+        if(dText == "0")
+            DISPLAY.textContent = bText;
+        else
+            DISPLAY.textContent = dText + bText;
     }
 }
 
