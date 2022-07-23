@@ -1,6 +1,6 @@
 //Global Values for Calculator
-var val1 = 0;
-var val2 = 0;
+var val1 = null;
+var val2 = null;
 var operator = null;
 const OP = ["+", "-", "*", "/"]; //possible operations
 
@@ -49,8 +49,12 @@ function display(btn){
         //TODO: = operation
         val2 = parseInt(DISPLAY.textContent);
         DISPLAY.textContent = operate(operator,val1,val2);
+        operator = null;
+        val2 = null;
     }else{
-        if(operator != null) DISPLAY.textContent = 0;
+        if(val1 == parseInt(DISPLAY.textContent) && operator != null){
+            DISPLAY.textContent = 0;
+        } 
         //TODO: numberical operations
         dText = DISPLAY.textContent.toString(); //text in Display
         bText = V.toString();
