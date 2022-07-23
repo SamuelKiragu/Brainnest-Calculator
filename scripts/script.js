@@ -24,7 +24,7 @@ function multiply(a,b){
 
 //divide two integers
 function divide(a,b){
-    return a / b;
+    return b == 0 ? "MATH ERROR": a / b;
 }
 
 //takes operator and two integers and calls any of the functions above
