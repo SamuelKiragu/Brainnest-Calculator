@@ -3,26 +3,56 @@
     margin: 0;
 }
 
+#CalcContainer{
+    background-color: #222222;
+    border: 5px solid #4e4d4d;
+    padding: 10px;
+    width: 400px;
+}
+
 #DisplaySect{
-    background: #262626;
-    color: #f6f6f6;
+    background: #707070;
+    color: #000000;
+    font-size: 55px;
     height: 100px;
+    overflow-x: auto;
+    overflow-y: hidden;
     padding: 20px;
+}
+
+#SymbolSect{
+    margin: 30px 0 10px;
+}
+
+.CalcItem{
+    background: white;
+    border: none;
+    border-radius: 2px;
+    font-size: 30px;
+    height: 80px;
+    padding: 10px 20px;
+    width: 90px; 
 }
 
 .RowContainer{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 20px 0;
+    padding: 2px 0;
 }
 
-.CalcItem{
-    padding: 10px 20px;
-    width: 100px;
+.SymbolItem{
+    background: #ffbc00;
+}
+
+.MiscItem{
+    background: orange;
 }
 
 body{
-    background: #b5adad;
+    background: #ffa50026;
+    display: flex;
+    font-family: monospace;
+    justify-content: center;
     margin: 100px 200px 0;
 }
