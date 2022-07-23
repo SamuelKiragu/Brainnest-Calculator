@@ -34,7 +34,7 @@ function operate(op,a,b){
 }
 
 //interprate which button has been clicked
-function handler(btn){
+function display(btn){
     //TODO: ADD LOGIC HERE
     const V = btn.value; //button value
 
@@ -63,5 +63,5 @@ function handler(btn){
 
 const BUTTONS = document.querySelectorAll('button');
 BUTTONS.forEach((btn, key) => {
-    btn.addEventListener('click', ()=>handler(btn));
+    btn.addEventListener('click', ()=>display(btn));
 });
