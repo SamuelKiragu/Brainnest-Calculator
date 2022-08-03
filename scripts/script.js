@@ -49,7 +49,7 @@ function display(btn){
         //TODO: = operation
         val2 = parseInt(DISPLAY.textContent);
         DISPLAY.textContent = operate(operator,val1,val2);
-        operator = null;
+        operator = "=";
         val2 = null;
     }else{
         if(val1 == parseInt(DISPLAY.textContent) && operator != null){
